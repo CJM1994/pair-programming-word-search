@@ -18,10 +18,8 @@ const transpose = function (matrix) {
 const wordSearch = (letters, word) => { 
     if (letters.length === 0) return false;
     const horizontalJoin = letters.map(ls => ls.join(''))
-    //console.log(horizontalJoin);
     const transposedLetters = transpose(letters);
     const verticalJoin = transposedLetters.map(ls => ls.join(''))
-    //console.log(verticalJoin)
     for (l of horizontalJoin) {
         if (l.includes(word)) return true
     }
